@@ -4,24 +4,32 @@ body {
 }
 
 #calculator-el {
-    padding: 10px;
-    margin: 50px auto 50px auto;
-    width: min-content;
-    height: 300px;
-    overflow: auto;
-    border: 1px solid;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+ padding: 20px;
+ padding-left: 35px;
+ margin: 100px auto 0 auto;
+ width: 300px;
+ height: fit-content;
+ border: 1px solid;
+ justify-content: center;
+ background-color: rgb(76, 76, 76);
+ border-radius: 10px;
 }
 
 button {
+    text-align: center;
+    box-sizing: border-box;
+    width: 60px;
+    height: 50px;
     margin: 3px;
 }
 
 #display-screen {
-    margin: 0;
-    width: 200px;
+    background-color: rgb(187, 187, 187);
+    font-size: 30px;
+    align-self: center;
+    margin-bottom: 10px;
+    width: 265px;
     height: 50px;
+    padding: 20px 5px 0 5px;
     border: 1px solid;
 }
