@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#calculator-el {
+    padding: 10px;
+    margin: 50px auto 50px auto;
+    width: min-content;
+    height: 300px;
+    overflow: auto;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+button {
+    margin: 3px;
+}
+
+#display-screen {
+    margin: 0;
+    width: 200px;
+    height: 50px;
+    border: 1px solid;
+}
