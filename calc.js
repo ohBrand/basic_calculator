@@ -23,6 +23,7 @@ function multiply(a, b) {
 function divide(a, b) {
     return a / b
 }
+
 function operate(operator, a, b) {
     if(operator === '+') {
         return add(a, b)
@@ -127,9 +128,9 @@ answerEl.addEventListener('click', () => {
 
    if(operator === '+') {
     screen.textContent = operate('+', numOne, numTwo)
-   } else if (operatorEl === '-') {
+   } else if (operator === '-') {
     screen.textContent = operate('-', numOne, numTwo)
-   } else if (operatorEl === '*') {
+   } else if (operator === '*') {
     screen.textContent = operate('*', numOne, numTwo)
    } else if (operator === '/') {
     screen.textContent = operate('/', numOne, numTwo)
