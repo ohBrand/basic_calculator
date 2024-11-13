@@ -36,26 +36,10 @@ function operate(operator, a, b) {
     }
 }
 
-clearEl.addEventListener('click', () => {
+clearEl.addEventListener('click', (e) => {
     screen.textContent = ''
+    operatorEl.forEach((element) => element.style.backgroundColor = '#03b1fc')
 })
-
-function displayOperator(e) {
-    switch(e.target) {
-        case operatorEl[0]:
-            screen.textContent += ' ' + operatorEl[0].textContent + ' '
-            break;
-        case operatorEl[1]:
-            screen.textContent += ' ' + operatorEl[1].textContent + ' '
-            break;
-        case operatorEl[2]:
-            screen.textContent += ' ' + operatorEl[2].textContent + ' '
-            break;
-        case operatorEl[3]:
-            screen.textContent += ' ' + operatorEl[3].textContent + ' '
-            break;
-    }
-}
 
 function displayNumber(e) {
     switch(e.target) {
@@ -99,32 +83,32 @@ calculator.addEventListener('click', (e) => {
 
     switch(e.target) {
         case operatorEl[0]:
-            screen.textContent += ' ' + operatorEl[0].textContent + ' '
+             e.target.style.backgroundColor = 'white'
             break;
         case operatorEl[1]:
-            screen.textContent += ' ' + operatorEl[1].textContent + ' '
+             e.target.style.backgroundColor = 'white'
             break;
         case operatorEl[2]:
-            screen.textContent += ' ' + operatorEl[2].textContent + ' '
+             e.target.style.backgroundColor = 'white'
             break;
         case operatorEl[3]:
-            screen.textContent += ' ' + operatorEl[3].textContent + ' '
+             e.target.style.backgroundColor = 'white'
             break;
     }
 
     if(e.target.matches('.operator-el')) {
+        e.target.style.backgroundColor = 'white'
+        operator = e.target.textContent
         numOne = parseInt(screen.textContent)
-        screen.textContent = e.target.textContent + ' '
-        console.log(numOne)
+        screen.textContent =  ' ' 
     }
+    
 })
 
 
 answerEl.addEventListener('click', () => {
-   operator = screen.textContent.slice(0,1)
-   console.log(operator)
-   numTwo = parseInt(screen.textContent.slice(2))
-   console.log(numTwo)
+   operatorEl.forEach((element) => element.style.backgroundColor = '#03b1fc')
+   numTwo = parseInt(screen.textContent)
 
    if(operator === '+') {
     screen.textContent = operate('+', numOne, numTwo)

@@ -34,3 +34,7 @@ button {
     padding: 20px 5px 0 5px;
     border: 1px solid;
 }
+
+.number-el, .operator-el, .clear-el, .result-el {
+    background-color: #03b1fc;
+}
